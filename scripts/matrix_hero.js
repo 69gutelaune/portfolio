@@ -8,6 +8,7 @@ const symbolsArray =
   "♫♪アァカサタナハマヤャラワンわワヰヱヲらりるれろラリルレロヤユヨマミムメモはひふへほハヒフヘいうえアイウエオかたにナニヌネノちつてとタチツテトきくけこカキクケコさしすせそサスセソABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
 
 const fontSize = 25;
+const animationSpeed = 150;
 
 // Column: create an Object function that draws vertical Letters
 //
@@ -24,13 +25,36 @@ class Letter {
     ctx.textAlign = "center";
     ctx.font = fontSize + "px monospace";
     ctx.fillText(this.character, this.x, this.y);
-    console.log(this.character);
   }
 }
 
-let newLetter = new Letter(100, 100);
-newLetter.draw();
-class Column {}
+let countdown = animationSpeed;
+let xPosition = fontSize;
+let yPosition = fontSize;
+let lettersArray = [];
+
+function drawColumn() {
+  function animate(timeStamp) {
+    requestAnimationFrame(animate);
+    if (timeStamp > countdown) {
+      countdown = countdown + animationSpeed;
+      for (let i = 1; i < canvas.width / fontSize; i++) {
+        let printLetter = new Letter(i * fontSize, yPosition);
+        printLetter.draw();
+      }
+      yPosition = yPosition + fontSize;
+    }
+    if (yPosition > canvas.height) {
+    }
+  }
+  animate();
+}
+
+function drawRows() {
+  drawColumn(200);
+}
+drawRows();
+
 //
 //
 // Row: create an Object or function that draws multiple lines horizontly

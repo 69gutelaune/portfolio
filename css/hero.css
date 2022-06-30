@@ -12,8 +12,7 @@
 }
 
 #matrix-canvas {
-  background: -webkit-gradient(linear, left bottom, left top, from(#ea9b00), to(#b47700));
-  background: linear-gradient(0deg, #ea9b00 0%, #b47700 100%);
+  background: #ea9b00;
   top: 0;
   left: 0;
 }

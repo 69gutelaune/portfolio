@@ -15,8 +15,12 @@
   width: 100vw;
 }
 #matrix-canvas {
-  // background: rgb(223, 157, 43);
-  background: black;
+  background: linear-gradient(
+    0deg,
+    rgba(234, 155, 0, 1) 0%,
+    rgba(180, 119, 0, 1) 100%
+  );
+  // background: black;
   top: 0;
   left: 0;
 }

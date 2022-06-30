@@ -1,8 +1,12 @@
+@import "variables";
+
+.hero-section {
+}
+
 * {
   margin: 0px;
   padding: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .matrix-bg {
@@ -10,8 +14,8 @@
   height: 100vh;
   width: 100vw;
 }
-
 #matrix-canvas {
+  // background: rgb(223, 157, 43);
   background: black;
   top: 0;
   left: 0;

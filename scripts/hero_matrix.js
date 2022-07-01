@@ -3,11 +3,12 @@ const canvas = document.getElementById("matrix-canvas");
 const ctx = canvas.getContext("2d");
 
 function calculateCanvasSize() {
-  if (window.innerHeight > 600) {
-    canvas.height = window.innerHeight;
-  } else {
-    canvas.height = 600;
-  }
+  canvas.height = canvas.clientHeight;
+  // if (window.innerHeight > 500) {
+  //   canvas.height = window.innerHeight;
+  // } else {
+  //   canvas.height = 500;
+  // }
   canvas.width = window.innerWidth;
 }
 calculateCanvasSize();
@@ -20,7 +21,6 @@ let mouse = {
 window.addEventListener("mousemove", (event) => {
   mouse.x = event.x;
   mouse.y = event.y;
-  console.log(canvas.height);
 });
 function findMaxHeightOfAninmation() {
   if (canvas.height > 400) {
@@ -51,7 +51,7 @@ let bgBottomColor = "rgba(244, 178, 70, 1)";
 let bgBottomColor20 = "rgba(244, 178, 70, 0.2)";
 let bgBottomColor50 = "rgba(244, 178, 70, 0.5)";
 
-let hoverColor = "rgba(192, 255, 220, 0.8)";
+let hoverColor = "rgba(192, 255, 220, 1)";
 let white = "rgba(255, 255, 255, 0.5)";
 let white50 = "rgba(255, 255, 255, 0.3)";
 let white20 = "rgba(255, 255, 255, 0.1)";
@@ -121,7 +121,7 @@ let mouseDistance = 50;
 
 let hover = false;
 let lastTime = 0;
-const fps = 10;
+const fps = 6;
 const nextFrame = 1000 / fps;
 let timer = 0;
 

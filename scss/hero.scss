@@ -1,10 +1,15 @@
-// ------------------------------------ BASIC
-// ------------------------------------ BASIC
-// ------------------------------------ BASIC
-// ------------------------------------ BASIC
-// ------------------------------------ BASIC
-
+// ------------------------------------ IMPORT
+// ------------------------------------ IMPORT
+// ------------------------------------ IMPORT
+// ------------------------------------ IMPORT
+// ------------------------------------ IMPORT
 @import "variables";
+
+// ------------------------------------ GENERAL
+// ------------------------------------ GENERAL
+// ------------------------------------ GENERAL
+// ------------------------------------ GENERAL
+// ------------------------------------ GENERAL
 
 // * {
 //   margin: 0px;
@@ -21,32 +26,164 @@
 
 #hero-section {
   overflow: hidden;
-  height: 90vh;
-  min-height: 500px;
+  // height: 90vh;
+  // min-height: 500px;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#hero-heaadline {
+#hero-heaadlines {
   position: absolute;
-  margin-top: -100px;
-  // display: flex;
-  // justify-content: center;
-  // flex-wrap: wrap;
-  // align-items: center;
 }
 #hero-jumbo {
+  font-family: $head-font;
+  letter-spacing: 0.2rem;
+  color: white;
   width: 100%;
-  font-size: 4rem;
+  font-size: 6rem;
   text-align: center;
 }
+
+// .main-text-jumbo {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
+
+.glitch:hover {
+  position: relative;
+
+  text-shadow: 0.005em 0 0 $glitch-first-color,
+    -0.005em -0.01em 0 $glitch-second-color,
+    0.01em -0.01em 0 $glitch-third-color;
+
+  animation: glitch 2000ms infinite;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch:hover span:first-child {
+  // color: red;
+  z-index: 2;
+  opacity: 0.6;
+
+  clip-path: polygon(0 0, 0 80%, 100% 0);
+  transform: translate(-0.015em, -0.015em);
+  animation: glitch 1500ms infinite;
+  animation: glitch-position 1000ms infinite;
+}
+.glitch:hover span:last-child {
+  // color: green;
+  z-index: 1;
+  opacity: 0.4;
+  clip-path: polygon(0 100%, 50% 100%, 90% 35%, 0 75%);
+  transform: translate(0.025em, -0.015em);
+  animation: glitch 500ms infinite;
+}
+
+@keyframes glitch-position {
+  0% {
+    transform: translate(-0.025em, -0.015em);
+  }
+  9% {
+    transform: translate(-0.025em, -0.015em);
+  }
+  10% {
+    transform: translate(-0.03em, -0.025em);
+  }
+  80% {
+    transform: translate(-0.03em, -0.025em);
+  }
+  99% {
+    transform: translate(-0.03em, -0.025em);
+  }
+  100% {
+    transform: translate(-0.02em, -0.01em);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -0.02em 0 0 $glitch-first-color,
+      0.01em -0.005em 0 $glitch-second-color,
+      0.01em -0.01em 0 $glitch-third-color;
+    color: #ffebc4;
+  }
+  4% {
+    text-shadow: -0.02em 0 0 $glitch-first-color,
+      0.01em -0.005em 0 $glitch-second-color,
+      0.01em -0.01em 0 $glitch-third-color;
+    color: #ffebc4;
+  }
+  5% {
+    text-shadow: 0.005em -0.01em 0 $glitch-first-color,
+      -0.01em 0.01em 0 $glitch-second-color,
+      -0.005em -0.005em 0 $glitch-third-color;
+    color: white;
+  }
+  19% {
+    text-shadow: 0.005em -0.01em 0 $glitch-first-color,
+      -0.01em 0.01em 0 $glitch-second-color,
+      -0.005em -0.005em 0 $glitch-third-color;
+    color: white;
+  }
+  20% {
+    text-shadow: 0.01em 0 0 $glitch-first-color,
+      0.03em -0.0025em 0 $glitch-second-color,
+      -0.0025em -0.02em 0 $glitch-third-color;
+    color: white;
+  }
+  99% {
+    text-shadow: 0.01em 0 0 $glitch-first-color,
+      0.03em -0.0025em 0 $glitch-second-color,
+      -0.0025em -0.02em 0 $glitch-third-color;
+    color: white;
+  }
+  100% {
+    text-shadow: -0.05em -0.05em 0 $glitch-first-color,
+      -0.01em 0.01em 0 $glitch-second-color,
+      -0.02em -0.01em 0 $glitch-third-color;
+    color: white;
+  }
+}
+
+#hero-h2 {
+  text-align: center;
+  font-family: $handWritten;
+  color: #ffebc4;
+  position: absolute;
+  width: 100%;
+}
+
+.hero-h2-span {
+  font-size: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.hero-h2-main {
+  color: $glitch-first-color;
+  font-size: 2.5rem;
+  transition: 1.5s ease-in;
+}
+// span:nth-child(2)
+.hero-h2-main:hover {
+  font-size: 3.3rem;
+  color: $glitch-first-color-opaque;
+}
+
 #matrix-canvas {
   background: rgba(221, 129, 21, 1);
   width: 100vw;
+  height: 70vh;
   min-height: 400px;
-
+  max-height: 800px;
   // background: black;
   top: 0;
   left: 0;

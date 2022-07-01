@@ -1,18 +1,41 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+#hero-section {
+  overflow: hidden;
+  height: 90vh;
+  min-height: 500px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.matrix-bg {
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
+#hero-heaadline {
+  position: absolute;
+  margin-top: -100px;
+}
+
+#hero-jumbo {
+  width: 100%;
+  font-size: 4rem;
+  text-align: center;
 }
 
 #matrix-canvas {
-  background: #c17200;
+  background: #dd8115;
+  width: 100vw;
+  min-height: 400px;
   top: 0;
   left: 0;
+}
+
+#parallax-section {
+  width: 100vw;
+  height: 1000px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ea9b00), to(#f4b246));
+  background: linear-gradient(0deg, #ea9b00 0%, #f4b246);
 }

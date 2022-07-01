@@ -1,23 +1,69 @@
+// ------------------------------------ BASIC
+// ------------------------------------ BASIC
+// ------------------------------------ BASIC
+// ------------------------------------ BASIC
+// ------------------------------------ BASIC
+
 @import "variables";
 
-.hero-section {
-}
+// * {
+//   margin: 0px;
+//   padding: 0px;
+//   box-sizing: border-box;
+// }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
+// ------------------------------------ MATRIX
+// ------------------------------------ MATRIX
+// ------------------------------------ MATRIX
+// ------------------------------------ MATRIX
+// ------------------------------------ MATRIX
+// ------------------------------------ MATRIX
 
-.matrix-bg {
+#hero-section {
   overflow: hidden;
-  height: 100vh;
+  height: 90vh;
+  min-height: 500px;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-heaadline {
+  position: absolute;
+  margin-top: -100px;
+  // display: flex;
+  // justify-content: center;
+  // flex-wrap: wrap;
+  // align-items: center;
+}
+#hero-jumbo {
+  width: 100%;
+  font-size: 4rem;
+  text-align: center;
 }
 #matrix-canvas {
-  background: rgba(193, 114, 0, 1);
+  background: rgba(221, 129, 21, 1);
+  width: 100vw;
+  min-height: 400px;
 
   // background: black;
   top: 0;
   left: 0;
+}
+
+// ------------------------------------ PARALLAX
+// ------------------------------------ PARALLAX
+// ------------------------------------ PARALLAX
+// ------------------------------------ PARALLAX
+// ------------------------------------ PARALLAX
+#parallax-section {
+  width: 100vw;
+  height: 1000px;
+  background: linear-gradient(
+    0deg,
+    rgba(234, 155, 0, 1) 0%,
+    rgba(244, 178, 70, 1)
+  );
+  // border: solid black;
 }

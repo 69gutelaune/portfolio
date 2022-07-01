@@ -34,15 +34,22 @@ let minAnimationHeight = 600;
 const symbolsArray =
   "♫♪アァカサタナハマヤャラワンわワヰヱヲらりるれろラリルレロヤユヨマミムメモはひふへほハヒフヘいうえアイウエオかたにナニヌネノちつてとタチツテトきくけこカキクケコさしすせそサスセソABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
 
-const fontSize = 20;
-let bgColor = "rgba(193, 114, 0, 1)";
-let bgColor50 = "rgba(193, 114, 0, 0.5)";
-let bgColorTransparent = "rgba(193, 114, 0, 0.2)";
-let reset = false;
-let firstTime = true;
-// resets the canvas to background color
-ctx.fillStyle = bgColor;
-ctx.fillRect(0, 0, canvas.width, canvas.height);
+const fontFamily = "Arial";
+let fontSize = 20;
+
+//
+//
+//     COLORS
+//
+//
+
+let bgColor = "rgba(221, 129, 21, 1)";
+let bgColor20 = "rgba(221, 129, 21, 0.2)";
+let bgColor50 = "rgba(221, 129, 21, 0.5)";
+
+let bgBottomColor = "rgba(244, 178, 70, 1)";
+let bgBottomColor20 = "rgba(244, 178, 70, 0.2)";
+let bgBottomColor50 = "rgba(244, 178, 70, 0.5)";
 
 let hoverColor = "rgba(192, 255, 220, 0.8)";
 let white = "rgba(255, 255, 255, 0.5)";
@@ -50,6 +57,13 @@ let white50 = "rgba(255, 255, 255, 0.3)";
 let white20 = "rgba(255, 255, 255, 0.1)";
 let transparent = "rgba(255, 255, 255, 0)";
 
+//
+//
+//
+//     GRADIENTS
+//
+//
+//
 let gradient = ctx.createLinearGradient(
   canvas.width / 2,
   0,
@@ -62,6 +76,47 @@ gradient.addColorStop(0.2, white50);
 gradient.addColorStop(0.4, white20);
 gradient.addColorStop(1, transparent);
 
+let backgroundGradient = ctx.createLinearGradient(
+  canvas.width / 2,
+  0,
+  canvas.width / 2,
+  canvas.height
+);
+backgroundGradient.addColorStop(0, bgColor);
+backgroundGradient.addColorStop(1, bgBottomColor);
+
+let backgroundGradient20 = ctx.createLinearGradient(
+  canvas.width / 2,
+  0,
+  canvas.width / 2,
+  canvas.height
+);
+backgroundGradient20.addColorStop(0, bgColor20);
+backgroundGradient20.addColorStop(1, bgBottomColor20);
+
+function updateGradients() {
+  backgroundGradient = ctx.createLinearGradient(
+    canvas.width / 2,
+    0,
+    canvas.width / 2,
+    canvas.height
+  );
+  backgroundGradient.addColorStop(0, bgColor);
+  backgroundGradient.addColorStop(1, bgBottomColor);
+
+  backgroundGradient20 = ctx.createLinearGradient(
+    canvas.width / 2,
+    0,
+    canvas.width / 2,
+    canvas.height
+  );
+  backgroundGradient20.addColorStop(0, bgColor20);
+  backgroundGradient20.addColorStop(1, bgBottomColor20);
+}
+
+let reset = false;
+let firstTime = true;
+
 let mouseDistance = 50;
 
 let hover = false;
@@ -69,6 +124,12 @@ let lastTime = 0;
 const fps = 10;
 const nextFrame = 1000 / fps;
 let timer = 0;
+
+function overpaintBackground() {
+  ctx.fillStyle = backgroundGradient;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+overpaintBackground();
 
 class Letter {
   constructor(x, y) {
@@ -84,7 +145,7 @@ class Letter {
       ctx.fillStyle = hoverColor;
     }
     ctx.textAlign = "center";
-    ctx.font = fontSize + "px monospace";
+    ctx.font = fontSize + "px monospace" + fontFamily;
     ctx.fillText(
       symbolsArray.charAt(Math.floor(Math.random() * symbolsArray.length)),
       this.x,
@@ -146,7 +207,7 @@ function animate(timeStamp) {
 
   if (timer > nextFrame) {
     // mattens out the underlying characters
-    ctx.fillStyle = bgColorTransparent;
+    ctx.fillStyle = backgroundGradient20;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     // loops threw all the rows
     for (let i = 0; i < lettersArray.length; i++) {
@@ -156,7 +217,7 @@ function animate(timeStamp) {
 
         lettersArray[i].draw();
         lettersArray[i].y += fontSize;
-        ctx.fillStyle = bgColor50;
+        ctx.fillStyle = backgroundGradient20;
         ctx.fillRect(
           lettersArray[i].x - fontSize / 2,
           lettersArray[i].y - fontSize * 12,
@@ -167,12 +228,6 @@ function animate(timeStamp) {
       if (lettersArray[i].y > maxAnimationHeight) {
         resetLetterToBeginning(i);
       }
-      // if (lettersArray[i].y > maxAnimationHeight) {
-      //   if (Math.random() > 0.85) {
-      //     lettersArray[i].go = false;
-      //     lettersArray[i].y = fontSize;
-      //   }
-      // }
     }
     timer = 0;
   } else {
@@ -187,19 +242,10 @@ animate(0);
 window.addEventListener("resize", () => {
   calculateCanvasSize();
 
-  let gradient = ctx.createLinearGradient(
-    canvas.width / 2,
-    0,
-    canvas.width / 2,
-    canvas.height
-  );
-
-  gradient.addColorStop(0, white);
-  gradient.addColorStop(0.2, white50);
-  gradient.addColorStop(0.4, white20);
-  gradient.addColorStop(1, transparent);
+  updateGradients();
   // ctx.clearRect(0, 0, canvas.width, canvas.height);
   lettersArray = createArray();
   maxAnimationHeight = findMaxHeightOfAninmation();
+  overpaintBackground();
   animate(0);
 });

@@ -11,11 +11,21 @@
 // ------------------------------------ GENERAL
 // ------------------------------------ GENERAL
 
-// * {
-//   margin: 0px;
-//   padding: 0px;
-//   box-sizing: border-box;
-// }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
 
 // ------------------------------------ MATRIX
 // ------------------------------------ MATRIX
@@ -26,13 +36,19 @@
 
 #hero-section {
   overflow: hidden;
-  // height: 90vh;
-  // min-height: 500px;
+  margin: 0px;
+  padding: 0px;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+// ------------------------------------ TYPO & <h1> <h3> TAGS
+// ------------------------------------ TYPO & <h1> <h3> TAGS
+// ------------------------------------ TYPO & <h1> <h3> TAGS
+// ------------------------------------ TYPO & <h1> <h3> TAGS
+// ------------------------------------ TYPO & <h1> <h3> TAGS
 
 #hero-heaadlines {
   position: absolute;
@@ -41,20 +57,54 @@
   font-family: $head-font;
   letter-spacing: 0.2rem;
   color: white;
-  width: 100%;
   font-size: 6rem;
   text-align: center;
+  position: relative;
 }
 
-// .main-text-jumbo {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
+.html-tag-jumbo {
+  font-family: $hand-written;
+  font-size: 2rem;
+  color: $glitch-first-color;
+}
+
+// ------------------------------------ TYPING EFFEKT
+// ------------------------------------ TYPING EFFEKT
+// ------------------------------------ TYPING EFFEKT
+// ------------------------------------ TYPING EFFEKT
+// ------------------------------------ TYPING EFFEKT
+
+// .typingEffect {
+//   position: relative;
 // }
+.jumboTypingEffect::after {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+
+  width: 4px;
+  height: 4.5rem;
+  border-right: 3px solid white;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// ------------------------------------ GLITCH
+// ------------------------------------ GLITCH
+// ------------------------------------ GLITCH
+// ------------------------------------ GLITCH
+// ------------------------------------ GLITCH
 
 .glitch:hover {
   position: relative;
-
   text-shadow: 0.005em 0 0 $glitch-first-color,
     -0.005em -0.01em 0 $glitch-second-color,
     0.01em -0.01em 0 $glitch-third-color;
@@ -62,14 +112,17 @@
   animation: glitch 2000ms infinite;
 }
 
-.glitch span {
+.glitch span:nth-child(1),
+.glitch span:nth-child(2) {
   position: absolute;
   top: 0;
   left: 0;
+  text-align: center;
 }
 
 .glitch:hover span:first-child {
   // color: red;
+  left: 0px;
   z-index: 2;
   opacity: 0.6;
 
@@ -153,27 +206,52 @@
   }
 }
 
+// ------------------------------------ Georgiy Stier SUBHEAD
+// ------------------------------------ Georgiy Stier SUBHEAD
+// ------------------------------------ Georgiy Stier SUBHEAD
+// ------------------------------------ Georgiy Stier SUBHEAD
+// ------------------------------------ Georgiy Stier SUBHEAD
+
 #hero-h2 {
   text-align: center;
-  font-family: $handWritten;
-  color: #ffebc4;
-  position: absolute;
-  width: 100%;
-}
-
-.hero-h2-span {
-  font-size: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.hero-h2-main {
+  font-family: $hand-written;
   color: $glitch-first-color;
   font-size: 2.5rem;
   transition: 1.5s ease-in;
+  position: absolute;
 }
-// span:nth-child(2)
-.hero-h2-main:hover {
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+#h2-wrapper {
+  position: relative;
+  width: 18rem;
+  display: flex;
+  justify-content: center;
+}
+
+.html-tag-subhead {
+  font-family: $hand-written;
+  color: $light-beige;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: absolute;
+  top: 1rem;
+}
+.left-tag-subhead {
+  margin-left: -10px;
+  left: 0;
+}
+.right-tag-subhead {
+  margin-right: -10px;
+  right: 0;
+}
+
+#hero-h2:hover {
   font-size: 3.3rem;
   color: $glitch-first-color-opaque;
 }

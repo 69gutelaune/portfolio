@@ -1,5 +1,23 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 #hero-section {
   overflow: hidden;
+  margin: 0px;
+  padding: 0px;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,9 +38,44 @@
   font-family: "Zaio";
   letter-spacing: 0.2rem;
   color: white;
-  width: 100%;
   font-size: 6rem;
   text-align: center;
+  position: relative;
+}
+
+.html-tag-jumbo {
+  font-family: "Stay Classy SLDT";
+  font-size: 2rem;
+  color: rgba(89, 27, 12, 0.4);
+}
+
+.jumboTypingEffect::after {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  width: 4px;
+  height: 4.5rem;
+  border-right: 3px solid white;
+  -webkit-animation: blink 0.7s infinite;
+          animation: blink 0.7s infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .glitch:hover {
@@ -32,13 +85,16 @@
           animation: glitch 2000ms infinite;
 }
 
-.glitch span {
+.glitch span:nth-child(1),
+.glitch span:nth-child(2) {
   position: absolute;
   top: 0;
   left: 0;
+  text-align: center;
 }
 
 .glitch:hover span:first-child {
+  left: 0px;
   z-index: 2;
   opacity: 0.6;
   -webkit-clip-path: polygon(0 0, 0 80%, 100% 0);
@@ -181,25 +237,54 @@
 #hero-h2 {
   text-align: center;
   font-family: "Stay Classy SLDT";
-  color: #ffebc4;
-  position: absolute;
-  width: 100%;
-}
-
-.hero-h2-span {
-  font-size: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.hero-h2-main {
   color: rgba(89, 27, 12, 0.4);
   font-size: 2.5rem;
   -webkit-transition: 1.5s ease-in;
   transition: 1.5s ease-in;
+  position: absolute;
 }
 
-.hero-h2-main:hover {
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#h2-wrapper {
+  position: relative;
+  width: 18rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.html-tag-subhead {
+  font-family: "Stay Classy SLDT";
+  color: #ffebc4;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: absolute;
+  top: 1rem;
+}
+
+.left-tag-subhead {
+  margin-left: -10px;
+  left: 0;
+}
+
+.right-tag-subhead {
+  margin-right: -10px;
+  right: 0;
+}
+
+#hero-h2:hover {
   font-size: 3.3rem;
   color: #591b0c;
 }

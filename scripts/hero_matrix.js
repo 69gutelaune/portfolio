@@ -32,11 +32,19 @@ let maxAnimationHeight = findMaxHeightOfAninmation();
 let minAnimationHeight = 600;
 
 const symbolsArray =
-  "♫♪アァカサタナハマヤャラワンわワヰヱヲらりるれろラリルレロヤユヨマミムメモはひふへほハヒフヘいうえアイウエオかたにナニヌネノちつてとタチツテトきくけこカキクケコさしすせそサスセソABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
+  "♪アァカサタナハマヤャラワンわワヰヱヲらりるれろラリルレロヤユヨマミムメモはひふへほハヒフヘいうえアイウエオかたにナニヌネノちつてとタチツテトきくけこカキクケコさしすせそサスセソABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
 
-const fontFamily = "Arial";
+const fontFamily = "Verdana";
+
 let fontSize = 20;
-
+function calculateFontSize() {
+  if (window.innerWidth > 1000) {
+    fontSize = 20;
+  } else {
+    fontSize = 15;
+  }
+}
+calculateFontSize();
 //
 //
 //     COLORS
@@ -145,7 +153,7 @@ class Letter {
       ctx.fillStyle = hoverColor;
     }
     ctx.textAlign = "center";
-    ctx.font = fontSize + "px monospace" + fontFamily;
+    ctx.font = fontSize + "px " + fontFamily;
     ctx.fillText(
       symbolsArray.charAt(Math.floor(Math.random() * symbolsArray.length)),
       this.x,
@@ -241,7 +249,7 @@ animate(0);
 // ctrate a function that listens to resizing the window
 window.addEventListener("resize", () => {
   calculateCanvasSize();
-
+  calculateFontSize();
   updateGradients();
   // ctx.clearRect(0, 0, canvas.width, canvas.height);
   lettersArray = createArray();

@@ -1,4 +1,12 @@
+// @font-face {
+//   font-family: "Zaio";
+//   src: url("/fonts/Zaio.woff") format("woff");
+// }
 @font-face {
-  font-family: "Zaio";
-  src: url("/fonts/Zaio.woff") format("woff");
+  font-family: "Stay Classy SLDT";
+  src: url("//db.onlinewebfonts.com/t/c947c14459c7a34a30d86f108dcbc300.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/c947c14459c7a34a30d86f108dcbc300.woff")
+      format("woff");
 }
+@import url("http://fonts.cdnfonts.com/css/verdana");

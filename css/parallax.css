@@ -4,19 +4,3 @@
   background: -webkit-gradient(linear, left bottom, left top, from(#ea9b00), to(#f4b246));
   background: linear-gradient(0deg, #ea9b00 0%, #f4b246);
 }
-
-::before,
-::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 0;
-  overflow: hidden;
-}

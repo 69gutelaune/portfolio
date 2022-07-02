@@ -11,14 +11,6 @@
 // ------------------------------------ GENERAL
 // ------------------------------------ GENERAL
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 0;
-}
-
 .visible {
   visibility: visible;
 }
@@ -44,28 +36,229 @@ h5 {
   justify-content: center;
 }
 
-// ------------------------------------ TYPO & <h1> <h3> TAGS
-// ------------------------------------ TYPO & <h1> <h3> TAGS
-// ------------------------------------ TYPO & <h1> <h3> TAGS
-// ------------------------------------ TYPO & <h1> <h3> TAGS
-// ------------------------------------ TYPO & <h1> <h3> TAGS
+#matrix-canvas {
+  background: rgba(221, 129, 21, 1);
+  width: 100vw;
+  min-width: 100vw;
+  height: 70vh;
+  min-height: 400px;
+  max-height: 800px;
+  // background: black;
+  top: 0;
+  left: 0;
+}
+
+// ------------------------------------ JUMBO TYPO
+// ------------------------------------ JUMBO TYPO
+// ------------------------------------ JUMBO TYPO
+// ------------------------------------ JUMBO TYPO
+// ------------------------------------ JUMBO TYPO
 
 #hero-heaadlines {
   position: absolute;
 }
 #hero-jumbo {
   font-family: $head-font;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.4rem;
   color: white;
-  font-size: 6rem;
+  font-size: 8rem;
   text-align: center;
   position: relative;
+  transition: font-size 0.2s ease-in;
 }
 
-.html-tag-jumbo {
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA Queries
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA Queries
+
+// JUMBO
+
+@media all and (max-width: 1150px) {
+  #hero-jumbo {
+    letter-spacing: 0.2rem;
+    font-size: 6rem;
+  }
+}
+
+@media all and (max-width: 710px) {
+  #hero-jumbo {
+    letter-spacing: 0.15rem;
+    font-size: 4rem;
+  }
+}
+
+@media all and (max-width: 480px) {
+  #hero-jumbo {
+    letter-spacing: 0.15rem;
+    font-size: 3rem;
+  }
+}
+@media all and (max-width: 370px) {
+  #hero-jumbo {
+    letter-spacing: 0.1rem;
+    font-size: 2.4rem;
+  }
+}
+
+// ------------------------------------ Georgiy Stier SUBHEAD
+// ------------------------------------ Georgiy Stier SUBHEAD
+// ------------------------------------ Georgiy Stier SUBHEAD
+// ------------------------------------ Georgiy Stier SUBHEAD
+// ------------------------------------ Georgiy Stier SUBHEAD
+
+#hero-h2 {
+  text-align: center;
   font-family: $hand-written;
-  font-size: 2rem;
   color: $glitch-first-color;
+  font-size: 4rem;
+  transition: font-size 0.45s ease-in;
+  position: absolute;
+}
+
+#hero-h2:hover {
+  font-size: 6rem;
+  color: $glitch-first-color-opaque;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+#h2-wrapper {
+  position: relative;
+  width: 18rem;
+  display: flex;
+  justify-content: center;
+  transition: width 0.4s ease-in;
+}
+#h2-wrapper:hover {
+  width: 25rem;
+}
+
+.html-tag-subhead {
+  font-family: $hand-written;
+  color: $light-beige;
+  font-size: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: absolute;
+  top: 1rem;
+  transition: all 0.4s ease-in;
+}
+.left-tag-subhead {
+  margin-left: -3rem;
+  margin-top: 1rem;
+  left: 0;
+}
+.right-tag-subhead {
+  margin-right: -3rem;
+  margin-top: 1rem;
+  right: 0;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA Queries
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA Queries
+
+@media all and (max-width: 1150px) {
+  #hero-h2 {
+    font-size: 3rem;
+  }
+  #hero-h2:hover {
+    font-size: 5rem;
+  }
+  #h2-wrapper {
+    width: 14.5rem;
+  }
+  #h2-wrapper:hover {
+    width: 22rem;
+  }
+  .html-tag-subhead {
+    font-size: 1.5rem;
+  }
+  .left-tag-subhead {
+    margin-left: -2rem;
+    margin-top: 0.7rem;
+  }
+  .right-tag-subhead {
+    margin-right: -2rem;
+    margin-top: 0.7rem;
+  }
+}
+@media all and (max-width: 710px) {
+  #hero-h2 {
+    font-size: 2rem;
+  }
+  #hero-h2:hover {
+    font-size: 3rem;
+  }
+  #h2-wrapper {
+    width: 10rem;
+  }
+  #h2-wrapper:hover {
+    width: 13rem;
+  }
+  .html-tag-subhead {
+    font-size: 1.3rem;
+  }
+  .left-tag-subhead {
+    margin-left: -2rem;
+    margin-top: 0;
+  }
+  .right-tag-subhead {
+    margin-right: -2rem;
+    margin-top: 0;
+  }
+}
+
+@media all and (max-width: 480px) {
+  #hero-h2 {
+    font-size: 1.7rem;
+  }
+  #hero-h2:hover {
+    font-size: 2.5rem;
+  }
+  #h2-wrapper {
+    width: 8rem;
+  }
+  #h2-wrapper:hover {
+    width: 11.5rem;
+  }
+  .html-tag-subhead {
+    font-size: 1rem;
+  }
+  .left-tag-subhead {
+    margin-left: -2rem;
+    margin-top: -0.3rem;
+  }
+  .right-tag-subhead {
+    margin-right: -2rem;
+    margin-top: -0.3rem;
+  }
+}
+@media all and (max-width: 370px) {
+  #hero-h2 {
+    font-size: 1.4rem;
+  }
+  #hero-h2:hover {
+    font-size: 2rem;
+  }
+  #h2-wrapper {
+    width: 6rem;
+  }
+  #h2-wrapper:hover {
+    width: 8rem;
+  }
+  .html-tag-subhead {
+    font-size: 0.9rem;
+  }
+  .left-tag-subhead {
+    margin-left: -2rem;
+    margin-top: -0.4rem;
+  }
+  .right-tag-subhead {
+    margin-right: -2rem;
+    margin-top: -0.4rem;
+  }
 }
 
 // ------------------------------------ TYPING EFFEKT
@@ -204,81 +397,4 @@ h5 {
       -0.02em -0.01em 0 $glitch-third-color;
     color: white;
   }
-}
-
-// ------------------------------------ Georgiy Stier SUBHEAD
-// ------------------------------------ Georgiy Stier SUBHEAD
-// ------------------------------------ Georgiy Stier SUBHEAD
-// ------------------------------------ Georgiy Stier SUBHEAD
-// ------------------------------------ Georgiy Stier SUBHEAD
-
-#hero-h2 {
-  text-align: center;
-  font-family: $hand-written;
-  color: $glitch-first-color;
-  font-size: 2.5rem;
-  transition: 1.5s ease-in;
-  position: absolute;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-}
-
-#h2-wrapper {
-  position: relative;
-  width: 18rem;
-  display: flex;
-  justify-content: center;
-}
-
-.html-tag-subhead {
-  font-family: $hand-written;
-  color: $light-beige;
-  font-size: 1.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  position: absolute;
-  top: 1rem;
-}
-.left-tag-subhead {
-  margin-left: -10px;
-  left: 0;
-}
-.right-tag-subhead {
-  margin-right: -10px;
-  right: 0;
-}
-
-#hero-h2:hover {
-  font-size: 3.3rem;
-  color: $glitch-first-color-opaque;
-}
-
-#matrix-canvas {
-  background: rgba(221, 129, 21, 1);
-  width: 100vw;
-  height: 70vh;
-  min-height: 400px;
-  max-height: 800px;
-  // background: black;
-  top: 0;
-  left: 0;
-}
-
-// ------------------------------------ PARALLAX
-// ------------------------------------ PARALLAX
-// ------------------------------------ PARALLAX
-// ------------------------------------ PARALLAX
-// ------------------------------------ PARALLAX
-#parallax-section {
-  width: 100vw;
-  height: 1000px;
-  background: linear-gradient(
-    0deg,
-    rgba(234, 155, 0, 1) 0%,
-    rgba(244, 178, 70, 1)
-  );
-  // border: solid black;
 }

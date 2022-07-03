@@ -1,6 +1,95 @@
-#parallax-section {
+#scene {
   width: 100vw;
-  height: 500px;
+  height: 130vw;
   background: -webkit-gradient(linear, left bottom, left top, from(#ea9b00), to(#f4b246));
   background: linear-gradient(0deg, #ea9b00 0%, #f4b246);
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 10px;
+          perspective: 10px;
+}
+
+.parallax-sun {
+  position: absolute;
+  margin-top: 20vw;
+  margin-left: 30vw;
+  width: 40vw;
+  -webkit-transform: translateZ(-10px);
+          transform: translateZ(-10px);
+}
+
+.parallax-right-castle {
+  position: absolute;
+  margin-left: 60vw;
+  width: 50vw;
+}
+
+.parallax-left-castle {
+  position: absolute;
+  margin-left: -5vw;
+  width: 40vw;
+}
+
+.parallax-clouds-background {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: 20vw;
+}
+
+.parallax-trees-background {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: 30vw;
+}
+
+.parallax-bridge {
+  position: absolute;
+  margin-left: -10vw;
+  width: 120vw;
+  margin-top: 20vw;
+}
+
+.parallax-mountains {
+  position: absolute;
+  margin-left: -4vw;
+  width: 108vw;
+  margin-top: 10vw;
+}
+
+.parallax-clouds-front {
+  position: absolute;
+  margin-left: -10vw;
+  width: 120vw;
+  margin-top: 32vw;
+}
+
+.parallax-forest-front {
+  position: absolute;
+  margin-left: -2vw;
+  width: 104vw;
+  margin-top: 20vw;
+}
+
+.parallax-houses {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: 50vw;
+}
+
+.parallax-clouds {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: 50vw;
+}
+
+.parallax-mountains-front {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: 35vw;
 }

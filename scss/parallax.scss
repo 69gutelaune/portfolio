@@ -1,12 +1,88 @@
 // doesnt work somehow?
 
-#parallax-section {
+#scene {
   width: 100vw;
-  height: 500px;
+  height: 130vw;
   background: linear-gradient(
     0deg,
     rgba(234, 155, 0, 1) 0%,
     rgba(244, 178, 70, 1)
   );
-  // border: solid black;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 10px;
+}
+
+.parallax-sun {
+  position: absolute;
+  margin-top: 20vw;
+  margin-left: 30vw;
+  width: 40vw;
+  transform: translateZ(-10px);
+}
+
+.parallax-right-castle {
+  position: absolute;
+  margin-left: 60vw;
+  width: 50vw;
+}
+.parallax-left-castle {
+  position: absolute;
+  margin-left: -5vw;
+  width: 40vw;
+}
+.parallax-clouds-background {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: 20vw;
+}
+.parallax-trees-background {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: 30vw;
+}
+.parallax-bridge {
+  position: absolute;
+  margin-left: -10vw;
+  width: 120vw;
+  margin-top: 20vw;
+}
+.parallax-mountains {
+  position: absolute;
+  margin-left: -4vw;
+  width: 108vw;
+  margin-top: 10vw;
+}
+.parallax-clouds-front {
+  position: absolute;
+  margin-left: -10vw;
+  width: 120vw;
+  margin-top: 32vw;
+}
+.parallax-forest-front {
+  position: absolute;
+  margin-left: -2vw;
+  width: 104vw;
+  margin-top: 20vw;
+}
+.parallax-houses {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: 50vw;
+}
+.parallax-clouds {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: 50vw;
+}
+.parallax-mountains-front {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: 35vw;
 }

@@ -40,12 +40,31 @@
   background: rgba(221, 129, 21, 1);
   width: 100vw;
   min-width: 100vw;
-  height: 70vh;
-  min-height: 400px;
+  height: 65vh;
+  min-height: 200px;
   max-height: 800px;
   // background: black;
   top: 0;
   left: 0;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA Queries
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA Queries
+
+@media all and(max-width:800px) {
+  #matrix-canvas {
+    height: 70vh;
+  }
+}
+@media all and(max-width:600px) {
+  #matrix-canvas {
+    height: 70vh;
+  }
+}
+@media all and(max-width:500px) {
+  #matrix-canvas {
+    height: 76vh;
+  }
 }
 
 // ------------------------------------ JUMBO TYPO

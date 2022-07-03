@@ -26,11 +26,29 @@
   background: #dd8115;
   width: 100vw;
   min-width: 100vw;
-  height: 70vh;
-  min-height: 400px;
+  height: 65vh;
+  min-height: 200px;
   max-height: 800px;
   top: 0;
   left: 0;
+}
+
+@media all and (max-width: 800px) {
+  #matrix-canvas {
+    height: 70vh;
+  }
+}
+
+@media all and (max-width: 600px) {
+  #matrix-canvas {
+    height: 70vh;
+  }
+}
+
+@media all and (max-width: 500px) {
+  #matrix-canvas {
+    height: 76vh;
+  }
 }
 
 #hero-heaadlines {

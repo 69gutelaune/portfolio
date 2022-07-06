@@ -11,62 +11,6 @@
 // ------------------------------------ GENERAL
 // ------------------------------------ GENERAL
 
-.visible {
-  visibility: visible;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-// ------------------------------------ MATRIX
-// ------------------------------------ MATRIX
-// ------------------------------------ MATRIX
-// ------------------------------------ MATRIX
-// ------------------------------------ MATRIX
-// ------------------------------------ MATRIX
-
-#hero-section {
-  overflow: hidden;
-  margin: 0px;
-  padding: 0px;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#matrix-canvas {
-  background: rgba(221, 129, 21, 1);
-  width: 100vw;
-  min-width: 100vw;
-  height: 65vh;
-  min-height: 200px;
-  max-height: 800px;
-  // background: black;
-  top: 0;
-  left: 0;
-}
-
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA Queries
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA Queries
-
-@media all and(max-width:800px) {
-  #matrix-canvas {
-    height: 70vh;
-  }
-}
-@media all and(max-width:600px) {
-  #matrix-canvas {
-    height: 70vh;
-  }
-}
-@media all and(max-width:500px) {
-  #matrix-canvas {
-    height: 76vh;
-  }
-}
-
 // ------------------------------------ JUMBO TYPO
 // ------------------------------------ JUMBO TYPO
 // ------------------------------------ JUMBO TYPO
@@ -75,21 +19,42 @@
 
 #hero-heaadlines {
   position: absolute;
+  top: 30vh;
+  width: 100vw;
+  overflow-y: visible;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform: translateZ(-10px) scale(2);
 }
 #hero-jumbo {
   font-family: $head-font;
   letter-spacing: 0.4rem;
   color: white;
-  font-size: 8rem;
+  font-size: 7rem;
   text-align: center;
   position: relative;
   transition: font-size 0.2s ease-in;
+  width: 100%;
 }
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA Queries
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA Queries
 
 // JUMBO
+@media all and (min-width: 2300px) {
+  #hero-jumbo {
+    letter-spacing: 0.2rem;
+    font-size: 10rem;
+  }
+}
+
+@media all and (min-width: 1500px) {
+  #hero-jumbo {
+    letter-spacing: 0.2rem;
+    font-size: 8rem;
+  }
+}
 
 @media all and (max-width: 1150px) {
   #hero-jumbo {
@@ -130,11 +95,12 @@
   color: $glitch-first-color;
   font-size: 4rem;
   transition: font-size 0.45s ease-in;
+  width: 100%;
   position: absolute;
 }
 
 #hero-h2:hover {
-  font-size: 6rem;
+  font-size: 5rem;
   color: $glitch-first-color-opaque;
 }
 
@@ -146,12 +112,11 @@
 #h2-wrapper {
   position: relative;
   width: 18rem;
-  display: flex;
-  justify-content: center;
-  transition: width 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 #h2-wrapper:hover {
-  width: 25rem;
+  width: 22rem;
+  color: rgba(192, 255, 220, 1);
 }
 
 .html-tag-subhead {
@@ -161,18 +126,22 @@
   padding-left: 1rem;
   padding-right: 1rem;
   position: absolute;
-  top: 1rem;
+  top: -0.5rem;
   transition: all 0.4s ease-in;
 }
 .left-tag-subhead {
   margin-left: -3rem;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
   left: 0;
+  opacity: 0%;
+  transition: all 0.5 ease-in;
 }
 .right-tag-subhead {
   margin-right: -3rem;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
   right: 0;
+  opacity: 0%;
+  transition: all ease-in;
 }
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MEDIA Queries
@@ -183,13 +152,13 @@
     font-size: 3rem;
   }
   #hero-h2:hover {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   #h2-wrapper {
-    width: 14.5rem;
+    width: 15.5rem;
   }
   #h2-wrapper:hover {
-    width: 22rem;
+    // width: 17rem;
   }
   .html-tag-subhead {
     font-size: 1.5rem;
@@ -208,24 +177,24 @@
     font-size: 2rem;
   }
   #hero-h2:hover {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   #h2-wrapper {
     width: 10rem;
   }
   #h2-wrapper:hover {
-    width: 13rem;
+    // width: 11.5rem;
   }
   .html-tag-subhead {
     font-size: 1.3rem;
   }
   .left-tag-subhead {
     margin-left: -2rem;
-    margin-top: 0;
+    margin-top: -0.1rem;
   }
   .right-tag-subhead {
     margin-right: -2rem;
-    margin-top: 0;
+    margin-top: -0.1rem;
   }
 }
 
@@ -234,13 +203,13 @@
     font-size: 1.7rem;
   }
   #hero-h2:hover {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   #h2-wrapper {
     width: 8rem;
   }
   #h2-wrapper:hover {
-    width: 11.5rem;
+    // width: 9rem;
   }
   .html-tag-subhead {
     font-size: 1rem;
@@ -259,13 +228,13 @@
     font-size: 1.4rem;
   }
   #hero-h2:hover {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   #h2-wrapper {
     width: 6rem;
   }
   #h2-wrapper:hover {
-    width: 8rem;
+    // width: 7rem;
   }
   .html-tag-subhead {
     font-size: 0.9rem;
@@ -330,6 +299,7 @@
   top: 0;
   left: 0;
   text-align: center;
+  width: 100%;
 }
 
 .glitch:hover span:first-child {

@@ -21,10 +21,15 @@ function typeGeorgiy() {
   if (letterG.length !== currentText.length) {
     setTimeout(typeGeorgiy, randomTimeout);
   } else {
-    leftMarkup.classList.remove("invisible");
-    leftMarkup.classList.add("visible");
-    rightMarkup.classList.remove("invisible");
-    rightMarkup.classList.add("visible");
+    console.log(leftMarkup.style);
+
+    leftMarkup.style.opacity = "100%";
+    rightMarkup.style.opacity = "100%";
+
+    // leftMarkup.classList.remove("invisible");
+    // leftMarkup.classList.add("visible");
+    // rightMarkup.classList.remove("invisible");
+    // rightMarkup.classList.add("visible");
   }
 }
 

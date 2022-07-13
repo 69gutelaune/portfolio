@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "an amazing portfolio to showcase my skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/69gutelaune/portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Georgiy Stier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/69gutelaune/portfolio/issues"
+  },
+  "homepage": "https://github.com/69gutelaune/portfolio#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

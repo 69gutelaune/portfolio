@@ -207,8 +207,12 @@ function resetLetterToBeginning(i) {
     lettersArray[i].y = fontSize;
   }
 }
-
+let animationOn = true;
 function animate(timeStamp) {
+  if (!animationOn) {
+    return;
+  }
+
   const deltaTime = timeStamp - lastTime;
   lastTime = timeStamp;
   requestAnimationFrame(animate);
@@ -243,17 +247,39 @@ function animate(timeStamp) {
   }
 }
 
-// loop threw all the arrays, if leter[i].go = true .....
 animate(0);
+// ---------------------------------------------------------- Resizing!
 
-// ctrate a function that listens to resizing the window
+// creating a boolean that stops the animation during resizing
+let matrixResizeWaiting = false;
+let windowWidth = window.innerWidth;
+
 window.addEventListener("resize", () => {
+  if (
+    windowWidth > window.innerWidth + 25 ||
+    windowWidth < window.innerWidth - 25
+  ) {
+    windowWidth = window.innerWidth;
+    if (matrixResizeWaiting) {
+      return;
+    }
+    animationOn = false;
+    matrixResizeWaiting = true;
+    setTimeout(() => {
+      matrixResizeWaiting = false;
+      matrixResize();
+    }, 1000);
+  }
+});
+
+function matrixResize() {
+  console.log("running");
+  animationOn = true;
   calculateCanvasSize();
   calculateFontSize();
   updateGradients();
-  // ctx.clearRect(0, 0, canvas.width, canvas.height);
   lettersArray = createArray();
   maxAnimationHeight = findMaxHeightOfAninmation();
   overpaintBackground();
   animate(0);
-});
+}

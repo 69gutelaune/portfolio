@@ -10,44 +10,49 @@
     <link rel="stylesheet" href="/css/hero.css" />
     <link rel="stylesheet" href="/css/parallax.css" />
     <link rel="stylesheet" href="/css/galaxy.css" />
+    <!-- scripts -->
+    <script defer src="/scripts/main.js"></script>
+    <script defer src="/scripts/hero_matrix.js"></script>
+    <script defer src="/scripts/hero_headlines.js"></script>
+    <script defer src="/scripts/parallax.js"></script>
+    <script defer src="/scripts/galaxy_section.js"></script>
   </head>
   <body>
       <!-- Parallax / Galaxy must be wrapped inside to, for the scrolling to function!-->
-      <section id="parallax-section">
-          <div id="hero-heaadlines">
-            <h1 id="hero-jumbo" class="jumboTypingEffect">
-            </h1> 
-              <div id="h2-wrapper">
-                <h4 class="html-tag-subhead left-tag-subhead">&lt h2 &gt</h4>  
-                <h3 id="hero-h2"></h2>
-                <h4 class="html-tag-subhead right-tag-subhead">&lt /h2 &gt</h4>  
-              </div>
-
+      <div id="hero-heaadlines">
+        <h1 id="hero-jumbo" class="jumboTypingEffect">
+        </h1> 
+          <div id="h2-wrapper">
+            <h4 class="html-tag-subhead left-tag-subhead">&lt h2 &gt</h4>  
+            <h3 id="hero-h2"></h2>
+            <h4 class="html-tag-subhead right-tag-subhead">&lt /h2 &gt</h4>  
+          </div>
         </div>
+      <section id="parallax-section">
+          
+
           <canvas  id="matrix-canvas"></canvas>
           <div id="parallax-images">
             <div class="parallax-clouds-background"><img src="/img/parallax/clouds_background.svg" alt="clouds"></div>
             <div class="parallax-sun" ><img src="/img/parallax/sun.svg" alt="sun"></div>
-            <div class="parallax-left-castle"><img src="/img/parallax/left_castle.svg" alt="castle"></div>
-            <div class="parallax-right-castle"><img src="/img/parallax/right_castle.svg" alt="castle"></div>
-            <div class="parallax-trees-background"><img src="/img/parallax/trees_background.svg" alt="trees"></div>
-            <div class="parallax-clouds-behind-bridge"><img src="/img/parallax/clouds.svg" alt="clouds"></div>
-            <div class="parallax-bridge"><img src="/img/parallax/bridge.svg" alt="bridge"></div>
-            <div class="vogel-1"><img src="/img/parallax/vogel-1.svg" alt="vogel"></div>
-            <div class="parallax-clouds-front"><img src="/img/parallax/clouds_front.svg" alt="mountains"></div>
-            <div class="parallax-forest-front"><img src="/img/parallax/forest_front.svg" alt="forest"></div>
-            <div class="parallax-houses"><img src="/img/parallax/houses.svg" alt="houses"></div>
+            <div class="parallax-left-castle"><img loading="lazy" src="/img/parallax/left_castle.svg" alt="castle"></div>
+            <div class="parallax-right-castle"><img loading="lazy" src="/img/parallax/right_castle.svg" alt="castle"></div>
+            <div class="parallax-trees-background"><img loading="lazy" src="/img/parallax/trees_background.svg" alt="trees"></div>
+            <div class="parallax-clouds-behind-bridge"><img loading="lazy" src="/img/parallax/clouds.svg" alt="clouds"></div>
+            <div class="parallax-bridge"><img loading="lazy" src="/img/parallax/bridge.svg" alt="bridge"></div>
+            <!-- <div class="vogel-1"><img src="/img/parallax/vogel-1.svg" alt="vogel"></div> -->
+            <div class="parallax-clouds-front"><img loading="lazy" src="/img/parallax/clouds_front.svg" alt="mountains"></div>
+            <div class="parallax-forest-front"><img loading="lazy" src="/img/parallax/forest_front.svg" alt="forest"></div>
+            <div class="parallax-houses"><img loading="lazy" src="/img/parallax/houses.svg" alt="houses"></div>
             <!-- <div class="parallax-mountains-front"><img src="/img/parallax/mountains_front.svg" alt="mountains"></div> -->
-            <div class="parallax-foreground"><img class="parallax-foreground-image" src="/img/parallax/foreground.svg" alt="foreground"></div>
+            <div class="parallax-foreground"><img loading="lazy" class="parallax-foreground-image" src="/img/parallax/foreground.svg" alt="foreground"></div>
             <section id="galaxy-section"></section>
           </div>
         </div>
       </section>
       <h1 class="test">Hallöchen</h1>
- 
+      <!-- combining!!!!!!!!!! with utility ;) to have only one hhtp request -->
+
   </body>
-  <script src="/scripts/main.js"></script>
-  <script src="/scripts/hero_matrix.js"></script>
-  <script src="/scripts/hero_headlines.js"></script>
-  <script src="/scripts/parallax.js"></script>
+
 </html>

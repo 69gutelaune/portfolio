@@ -18,14 +18,15 @@
 // ------------------------------------ JUMBO TYPO
 
 #hero-heaadlines {
-  position: absolute;
+  position: fixed;
   top: 30vh;
   width: 100vw;
   overflow-y: visible;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  transform: translateZ(-10px) scale(2);
+  z-index: 10;
+  // transform: translateZ(-10px) scale(2);
 }
 #hero-jumbo {
   font-family: $head-font;

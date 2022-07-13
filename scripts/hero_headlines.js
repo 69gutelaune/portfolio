@@ -63,7 +63,17 @@ let letter = "";
   }
 })();
 
-// typeGeorgiy();
-/* <span aria-hidden="true" class="hero-h2-span">< </span><span class="hero-h2-main">Georgiy Stier</span> <span aria-hidden="true" class="hero-h2-span">/></span>  */
+// -------------------------------------------------------------- Text opacity on scroll down ( 1  to 0)
+const headlines = document.querySelector("#hero-heaadlines");
 
-// create a new class with a smaller typing line
+function jumboOpacity() {
+  console.log("yo");
+  if (window.scrollY >= window.innerHeight / 5) {
+    headlines.style.opacity = 0;
+  } else {
+    headlines.style.opacity = 1;
+  }
+}
+document.addEventListener("resize", () => {
+  console.log("hi");
+});

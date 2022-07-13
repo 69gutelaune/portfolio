@@ -1,5 +1,5 @@
 #hero-heaadlines {
-  position: absolute;
+  position: fixed;
   top: 30vh;
   width: 100vw;
   overflow-y: visible;
@@ -11,8 +11,7 @@
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-transform: translateZ(-10px) scale(2);
-          transform: translateZ(-10px) scale(2);
+  z-index: 10;
 }
 
 #hero-jumbo {

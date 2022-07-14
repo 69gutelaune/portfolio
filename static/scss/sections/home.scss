@@ -3,7 +3,7 @@
 // ------------------------------------ IMPORT
 // ------------------------------------ IMPORT
 // ------------------------------------ IMPORT
-@import "variables";
+@use "../abstracts/index" as *;
 
 // ------------------------------------ GENERAL
 // ------------------------------------ GENERAL
@@ -159,18 +159,18 @@
     width: 15.5rem;
   }
   #h2-wrapper:hover {
-    // width: 17rem;
+    width: 17rem;
   }
   .html-tag-subhead {
     font-size: 1.5rem;
   }
   .left-tag-subhead {
     margin-left: -2rem;
-    margin-top: 0.7rem;
+    margin-top: 2rem;
   }
   .right-tag-subhead {
     margin-right: -2rem;
-    margin-top: 0.7rem;
+    margin-top: 1.8rem;
   }
 }
 @media all and (max-width: 710px) {
@@ -184,18 +184,18 @@
     width: 10rem;
   }
   #h2-wrapper:hover {
-    // width: 11.5rem;
+    width: 14rem;
   }
   .html-tag-subhead {
     font-size: 1.3rem;
   }
   .left-tag-subhead {
     margin-left: -2rem;
-    margin-top: -0.1rem;
+    margin-top: 1rem;
   }
   .right-tag-subhead {
     margin-right: -2rem;
-    margin-top: -0.1rem;
+    margin-top: 1rem;
   }
 }
 
@@ -210,7 +210,7 @@
     width: 8rem;
   }
   #h2-wrapper:hover {
-    // width: 9rem;
+    width: 8.7rem;
   }
   .html-tag-subhead {
     font-size: 1rem;
@@ -235,7 +235,7 @@
     width: 6rem;
   }
   #h2-wrapper:hover {
-    // width: 7rem;
+    width: 6.7rem;
   }
   .html-tag-subhead {
     font-size: 0.9rem;

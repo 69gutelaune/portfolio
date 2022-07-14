@@ -1,0 +1,7 @@
+HERO SECTION
+- Create a loding Icon
+- first load the Content, then the JS for Matrix then Parallax then only by scroll.
+- uglify and bundle Hero section!
+- Remove and add event listeners on scroll
+- overpaint screen on resize 
+

@@ -1,9 +1,9 @@
 #galaxy-section {
-  position: absolute;
+  position: relative;
   top: -4vw;
-  background-color: pink;
-  height: 500px;
-
+  background-color: yellow;
+  height: 2000px;
+  width: 100vw;
   z-index: 2;
   transform: translateZ(9.5px) scale(0.05);
 }

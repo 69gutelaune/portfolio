@@ -1,110 +1,176 @@
-#matrix-canvas {
-  background: #dd8115;
-  width: 100vw;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-#hero-section {
-  overflow-x: hidden;
-  overflow-y: visible;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+#galaxy-section {
+  position: relative;
+  top: -4vw;
+  background-color: yellow;
+  height: 2000px;
+  width: 100vw;
+  z-index: 2;
+  transform: translateZ(9.5px) scale(0.05);
 }
 
 #hero-heaadlines {
-  position: absolute;
+  position: fixed;
   top: 30vh;
+  width: 100vw;
   overflow-y: visible;
-  z-index: 1;
-  -webkit-transform: translateZ(-10px);
-          transform: translateZ(-10px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 10;
 }
 
 #hero-jumbo {
   font-family: "Zaio";
   letter-spacing: 0.4rem;
   color: white;
-  font-size: 8rem;
+  font-size: 7rem;
   text-align: center;
   position: relative;
-  -webkit-transition: font-size 0.2s ease-in;
   transition: font-size 0.2s ease-in;
+  width: 100%;
 }
 
+@media all and (min-width: 2300px) {
+  #hero-jumbo {
+    letter-spacing: 0.2rem;
+    font-size: 10rem;
+  }
+}
+@media all and (min-width: 1500px) {
+  #hero-jumbo {
+    letter-spacing: 0.2rem;
+    font-size: 8rem;
+  }
+}
 @media all and (max-width: 1150px) {
   #hero-jumbo {
     letter-spacing: 0.2rem;
     font-size: 6rem;
   }
 }
-
 @media all and (max-width: 710px) {
   #hero-jumbo {
     letter-spacing: 0.15rem;
     font-size: 4rem;
   }
 }
-
 @media all and (max-width: 480px) {
   #hero-jumbo {
     letter-spacing: 0.15rem;
     font-size: 3rem;
   }
 }
-
 @media all and (max-width: 370px) {
   #hero-jumbo {
     letter-spacing: 0.1rem;
     font-size: 2.4rem;
   }
 }
-
 #hero-h2 {
   text-align: center;
   font-family: "Stay Classy SLDT";
   color: rgba(89, 27, 12, 0.4);
   font-size: 4rem;
-  -webkit-transition: font-size 0.45s ease-in;
   transition: font-size 0.45s ease-in;
+  width: 100%;
   position: absolute;
 }
 
 #hero-h2:hover {
   font-size: 5rem;
-  color: #591b0c;
+  color: rgb(89, 27, 12);
 }
 
 .flex-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 #h2-wrapper {
   position: relative;
   width: 18rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }
 
 #h2-wrapper:hover {
-  width: 20rem;
+  width: 22rem;
+  color: rgb(192, 255, 220);
 }
 
 .html-tag-subhead {
@@ -114,26 +180,23 @@
   padding-left: 1rem;
   padding-right: 1rem;
   position: absolute;
-  top: 1rem;
-  -webkit-transition: all 0.4s ease-in;
+  top: -0.5rem;
   transition: all 0.4s ease-in;
 }
 
 .left-tag-subhead {
   margin-left: -3rem;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
   left: 0;
   opacity: 0%;
-  -webkit-transition: all 0.5 ease-in;
   transition: all 0.5 ease-in;
 }
 
 .right-tag-subhead {
   margin-right: -3rem;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
   right: 0;
   opacity: 0%;
-  -webkit-transition: all ease-in;
   transition: all ease-in;
 }
 
@@ -155,14 +218,13 @@
   }
   .left-tag-subhead {
     margin-left: -2rem;
-    margin-top: 0.7rem;
+    margin-top: 2rem;
   }
   .right-tag-subhead {
     margin-right: -2rem;
-    margin-top: 0.7rem;
+    margin-top: 1.8rem;
   }
 }
-
 @media all and (max-width: 710px) {
   #hero-h2 {
     font-size: 2rem;
@@ -174,21 +236,20 @@
     width: 10rem;
   }
   #h2-wrapper:hover {
-    width: 11.5rem;
+    width: 14rem;
   }
   .html-tag-subhead {
     font-size: 1.3rem;
   }
   .left-tag-subhead {
     margin-left: -2rem;
-    margin-top: -0.1rem;
+    margin-top: 1rem;
   }
   .right-tag-subhead {
     margin-right: -2rem;
-    margin-top: -0.1rem;
+    margin-top: 1rem;
   }
 }
-
 @media all and (max-width: 480px) {
   #hero-h2 {
     font-size: 1.7rem;
@@ -200,7 +261,7 @@
     width: 8rem;
   }
   #h2-wrapper:hover {
-    width: 9rem;
+    width: 8.7rem;
   }
   .html-tag-subhead {
     font-size: 1rem;
@@ -214,7 +275,6 @@
     margin-top: -0.3rem;
   }
 }
-
 @media all and (max-width: 370px) {
   #hero-h2 {
     font-size: 1.4rem;
@@ -226,7 +286,7 @@
     width: 6rem;
   }
   #h2-wrapper:hover {
-    width: 7rem;
+    width: 6.7rem;
   }
   .html-tag-subhead {
     font-size: 0.9rem;
@@ -240,7 +300,6 @@
     margin-top: -0.4rem;
   }
 }
-
 .jumboTypingEffect::after {
   content: "";
   position: absolute;
@@ -269,7 +328,6 @@
     opacity: 1;
   }
 }
-
 .glitch:hover {
   position: relative;
   text-shadow: 0.005em 0 0 rgba(89, 27, 12, 0.4), -0.005em -0.01em 0 rgba(192, 255, 220, 0.5), 0.01em -0.01em 0 #230802;
@@ -283,6 +341,7 @@
   top: 0;
   left: 0;
   text-align: center;
+  width: 100%;
 }
 
 .glitch:hover span:first-child {
@@ -291,8 +350,7 @@
   opacity: 0.6;
   -webkit-clip-path: polygon(0 0, 0 80%, 100% 0);
           clip-path: polygon(0 0, 0 80%, 100% 0);
-  -webkit-transform: translate(-0.015em, -0.015em);
-          transform: translate(-0.015em, -0.015em);
+  transform: translate(-0.015em, -0.015em);
   -webkit-animation: glitch 1500ms infinite;
           animation: glitch 1500ms infinite;
   -webkit-animation: glitch-position 1000ms infinite;
@@ -304,66 +362,52 @@
   opacity: 0.4;
   -webkit-clip-path: polygon(0 100%, 50% 100%, 90% 35%, 0 75%);
           clip-path: polygon(0 100%, 50% 100%, 90% 35%, 0 75%);
-  -webkit-transform: translate(0.025em, -0.015em);
-          transform: translate(0.025em, -0.015em);
+  transform: translate(0.025em, -0.015em);
   -webkit-animation: glitch 500ms infinite;
           animation: glitch 500ms infinite;
 }
 
 @-webkit-keyframes glitch-position {
   0% {
-    -webkit-transform: translate(-0.025em, -0.015em);
-            transform: translate(-0.025em, -0.015em);
+    transform: translate(-0.025em, -0.015em);
   }
   9% {
-    -webkit-transform: translate(-0.025em, -0.015em);
-            transform: translate(-0.025em, -0.015em);
+    transform: translate(-0.025em, -0.015em);
   }
   10% {
-    -webkit-transform: translate(-0.03em, -0.025em);
-            transform: translate(-0.03em, -0.025em);
+    transform: translate(-0.03em, -0.025em);
   }
   80% {
-    -webkit-transform: translate(-0.03em, -0.025em);
-            transform: translate(-0.03em, -0.025em);
+    transform: translate(-0.03em, -0.025em);
   }
   99% {
-    -webkit-transform: translate(-0.03em, -0.025em);
-            transform: translate(-0.03em, -0.025em);
+    transform: translate(-0.03em, -0.025em);
   }
   100% {
-    -webkit-transform: translate(-0.02em, -0.01em);
-            transform: translate(-0.02em, -0.01em);
+    transform: translate(-0.02em, -0.01em);
   }
 }
 
 @keyframes glitch-position {
   0% {
-    -webkit-transform: translate(-0.025em, -0.015em);
-            transform: translate(-0.025em, -0.015em);
+    transform: translate(-0.025em, -0.015em);
   }
   9% {
-    -webkit-transform: translate(-0.025em, -0.015em);
-            transform: translate(-0.025em, -0.015em);
+    transform: translate(-0.025em, -0.015em);
   }
   10% {
-    -webkit-transform: translate(-0.03em, -0.025em);
-            transform: translate(-0.03em, -0.025em);
+    transform: translate(-0.03em, -0.025em);
   }
   80% {
-    -webkit-transform: translate(-0.03em, -0.025em);
-            transform: translate(-0.03em, -0.025em);
+    transform: translate(-0.03em, -0.025em);
   }
   99% {
-    -webkit-transform: translate(-0.03em, -0.025em);
-            transform: translate(-0.03em, -0.025em);
+    transform: translate(-0.03em, -0.025em);
   }
   100% {
-    -webkit-transform: translate(-0.02em, -0.01em);
-            transform: translate(-0.02em, -0.01em);
+    transform: translate(-0.02em, -0.01em);
   }
 }
-
 @-webkit-keyframes glitch {
   0% {
     text-shadow: -0.02em 0 0 rgba(89, 27, 12, 0.4), 0.01em -0.005em 0 rgba(192, 255, 220, 0.5), 0.01em -0.01em 0 #230802;
@@ -394,7 +438,6 @@
     color: white;
   }
 }
-
 @keyframes glitch {
   0% {
     text-shadow: -0.02em 0 0 rgba(89, 27, 12, 0.4), 0.01em -0.005em 0 rgba(192, 255, 220, 0.5), 0.01em -0.01em 0 #230802;
@@ -424,4 +467,159 @@
     text-shadow: -0.05em -0.05em 0 rgba(89, 27, 12, 0.4), -0.01em 0.01em 0 rgba(192, 255, 220, 0.5), -0.02em -0.01em 0 #230802;
     color: white;
   }
+}
+#parallax-section {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+  transform-style: preserve-3d;
+  background: rgb(244, 178, 70);
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+#parallax-section::-webkit-scrollbar {
+  display: none;
+}
+
+#matrix-canvas {
+  background: rgb(221, 129, 21);
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+#parallax-images {
+  position: absolute;
+  top: 90vh;
+  transform-style: preserve-3d;
+}
+
+.parallax-sun {
+  position: absolute;
+  margin-top: -15vw;
+  margin-left: 17vw;
+  width: 66vw;
+  transform: translateZ(1px);
+  z-index: -1;
+}
+
+.parallax-clouds-background {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: -10vw;
+  transform: translateZ(1px);
+  z-index: -1;
+}
+
+.parallax-right-castle {
+  position: absolute;
+  margin-top: -3vw;
+  margin-right: 0;
+  width: 37vw;
+  z-index: 1;
+  transform: translateZ(2px) scale(1);
+}
+
+.parallax-left-castle {
+  position: absolute;
+  margin-top: -6vw;
+  margin-left: 10vw;
+  width: 28vw;
+  z-index: 1;
+  transform: translateZ(2px) scale(1);
+}
+
+.parallax-trees-background {
+  position: absolute;
+  margin-left: -3vw;
+  width: 100vw;
+  margin-top: -3vw;
+  transform: translateZ(5px) scale(0.75);
+  z-index: 1;
+}
+
+.parallax-clouds-behind-bridge {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: -12vw;
+  opacity: 0.2;
+  transform: translateZ(5.5px) scale(0.5);
+  z-index: 1;
+}
+
+.parallax-bridge {
+  position: absolute;
+  margin-left: 0vw;
+  width: 100vw;
+  margin-top: -23vw;
+  z-index: 2;
+  transform: translateZ(6px) scale(0.45);
+}
+
+.parallax-clouds-front {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: -14vw;
+  z-index: 1;
+  transform: translateZ(7px) scale(0.3);
+  opacity: 0.3;
+}
+
+.parallax-forest-front {
+  position: absolute;
+  margin-left: 0;
+  width: 100vw;
+  margin-top: -20vw;
+  z-index: 3;
+  transform: translateZ(7.5px) scale(0.3);
+}
+
+.parallax-houses {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: -16vw;
+  z-index: 1;
+  transform: translateZ(8.5px) scale(0.15);
+}
+
+.parallax-mountains-front {
+  position: absolute;
+  margin-left: 0;
+  width: 100vw;
+  margin-top: -31vw;
+  z-index: 1;
+  transform: translateZ(9px) scale(0.1);
+}
+
+.parallax-foreground {
+  position: absolute;
+  margin-left: -5vw;
+  width: 110vw;
+  margin-top: -25vw;
+  z-index: 1;
+  transform: translateZ(9.5px) scale(0.05);
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
 }

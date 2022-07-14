@@ -1,0 +1,23 @@
+// Ab
+// "*" makes it not necesarry to write "index.$mainColor" but instead: "$mainColor
+
+@use "scss/abstracts/index" as *;
+@use "scss/base/reset.scss";
+@use "scss/sections/galaxy.scss";
+@use "scss/sections/home.scss";
+@use "scss/sections/parallax.scss";
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+// h
